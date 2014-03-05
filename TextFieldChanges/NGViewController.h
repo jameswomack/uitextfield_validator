@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NGViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UITextField *correctableTextField;
 @end

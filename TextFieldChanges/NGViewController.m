@@ -7,9 +7,10 @@
 //
 
 #import "NGViewController.h"
+#import "NGTextFieldValidationObserver.h"
 
 @interface NGViewController ()
-
+@property (nonatomic, strong) NGTextFieldValidationObserver *textFieldValidator;
 @end
 
 @implementation NGViewController
@@ -17,13 +18,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.textFieldValidator = [NGTextFieldValidationObserver.alloc
+                               initWithTextField:self.correctableTextField
+                               andValidationBlock:^BOOL(id object) {
+        return [[[object text]
+                 stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet] isEqualToString:@"Japan"];
+    }];
 }
 
 @end

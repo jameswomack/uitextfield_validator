@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1BDE996818C13C76004EAD12"
-               BuildableName = "TextFieldChangesTests.xctest"
-               BlueprintName = "TextFieldChangesTests"
+               BlueprintIdentifier = "1BC9ADF418C6FDAC00C99622"
+               BuildableName = "TextFieldChangesCedarTests.octest"
+               BlueprintName = "TextFieldChangesCedarTests"
                ReferencedContainer = "container:TextFieldChanges.xcodeproj">
             </BuildableReference>
          </TestableReference>

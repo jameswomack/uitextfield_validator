@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B075BFB18C4129A001B30D0 /* NGTextFieldValidationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B075BFA18C4129A001B30D0 /* NGTextFieldValidationObserver.m */; };
+		1B10096318C6EB2500F9C877 /* NSObject+KeyedSubscript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10096218C6EB2500F9C877 /* NSObject+KeyedSubscript.m */; };
+		1BC9ADF718C6FDAC00C99622 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC9ADF618C6FDAC00C99622 /* SenTestingKit.framework */; };
+		1BC9ADF818C6FDAC00C99622 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE994A18C13C76004EAD12 /* CoreGraphics.framework */; };
+		1BC9ADF918C6FDAC00C99622 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE994C18C13C76004EAD12 /* UIKit.framework */; };
+		1BC9ADFA18C6FDAC00C99622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE994818C13C76004EAD12 /* Foundation.framework */; };
+		1BC9AE0018C6FDAC00C99622 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC9ADFE18C6FDAC00C99622 /* InfoPlist.strings */; };
+		1BC9AE0218C6FDAC00C99622 /* NSObjectKeyedSubscriptSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9AE0118C6FDAC00C99622 /* NSObjectKeyedSubscriptSpec.mm */; };
+		1BC9AE0518C6FDAC00C99622 /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC9AE0418C6FDAC00C99622 /* Cedar-iOS.framework */; };
+		1BC9AE0C18C700D900C99622 /* NSCache+NGValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9AE0B18C700D900C99622 /* NSCache+NGValidation.m */; };
+		1BC9AE0E18C7019700C99622 /* NGValidationIncludes.h in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9AE0D18C7014800C99622 /* NGValidationIncludes.h */; };
+		1BC9AE1018C7036F00C99622 /* NSCacheNGValidationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9AE0F18C7036F00C99622 /* NSCacheNGValidationSpec.mm */; };
+		1BC9AE1318C70F0000C99622 /* NGTextFieldValidationObserverSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9AE1218C70F0000C99622 /* NGTextFieldValidationObserverSpec.mm */; };
+		1BC9AE1618C7134900C99622 /* NGTextFieldValidationObserver_Private.h in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9AE1418C7105600C99622 /* NGTextFieldValidationObserver_Private.h */; };
 		1BDE994918C13C76004EAD12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE994818C13C76004EAD12 /* Foundation.framework */; };
 		1BDE994B18C13C76004EAD12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE994A18C13C76004EAD12 /* CoreGraphics.framework */; };
 		1BDE994D18C13C76004EAD12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE994C18C13C76004EAD12 /* UIKit.framework */; };
@@ -17,24 +31,27 @@
 		1BDE995F18C13C76004EAD12 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE995D18C13C76004EAD12 /* Main_iPad.storyboard */; };
 		1BDE996218C13C76004EAD12 /* NGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE996118C13C76004EAD12 /* NGViewController.m */; };
 		1BDE996418C13C76004EAD12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE996318C13C76004EAD12 /* Images.xcassets */; };
-		1BDE996B18C13C76004EAD12 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE996A18C13C76004EAD12 /* XCTest.framework */; };
-		1BDE996C18C13C76004EAD12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE994818C13C76004EAD12 /* Foundation.framework */; };
-		1BDE996D18C13C76004EAD12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE994C18C13C76004EAD12 /* UIKit.framework */; };
-		1BDE997518C13C76004EAD12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE997318C13C76004EAD12 /* InfoPlist.strings */; };
-		1BDE997718C13C76004EAD12 /* TextFieldChangesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE997618C13C76004EAD12 /* TextFieldChangesTests.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1BDE996E18C13C76004EAD12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1BDE993D18C13C76004EAD12 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1BDE994418C13C76004EAD12;
-			remoteInfo = TextFieldChanges;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		1B075BF918C4129A001B30D0 /* NGTextFieldValidationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGTextFieldValidationObserver.h; sourceTree = "<group>"; };
+		1B075BFA18C4129A001B30D0 /* NGTextFieldValidationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTextFieldValidationObserver.m; sourceTree = "<group>"; };
+		1B10096118C6EB2500F9C877 /* NSObject+KeyedSubscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KeyedSubscript.h"; sourceTree = "<group>"; };
+		1B10096218C6EB2500F9C877 /* NSObject+KeyedSubscript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KeyedSubscript.m"; sourceTree = "<group>"; };
+		1BC9ADF518C6FDAC00C99622 /* TextFieldChangesCedarTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFieldChangesCedarTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BC9ADF618C6FDAC00C99622 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1BC9ADFD18C6FDAC00C99622 /* TextFieldChangesCedarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextFieldChangesCedarTests-Info.plist"; sourceTree = "<group>"; };
+		1BC9ADFF18C6FDAC00C99622 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BC9AE0118C6FDAC00C99622 /* NSObjectKeyedSubscriptSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NSObjectKeyedSubscriptSpec.mm; sourceTree = "<group>"; };
+		1BC9AE0318C6FDAC00C99622 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		1BC9AE0418C6FDAC00C99622 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		1BC9AE0618C6FDAC00C99622 /* TextFieldChangesCedarTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextFieldChangesCedarTests-Prefix.pch"; sourceTree = "<group>"; };
+		1BC9AE0A18C700D900C99622 /* NSCache+NGValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSCache+NGValidation.h"; path = "../../../../Documents/NSCache+NGValidation.h"; sourceTree = "<group>"; };
+		1BC9AE0B18C700D900C99622 /* NSCache+NGValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSCache+NGValidation.m"; path = "../../../../Documents/NSCache+NGValidation.m"; sourceTree = "<group>"; };
+		1BC9AE0D18C7014800C99622 /* NGValidationIncludes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = NGValidationIncludes.h; sourceTree = "<group>"; };
+		1BC9AE0F18C7036F00C99622 /* NSCacheNGValidationSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NSCacheNGValidationSpec.mm; sourceTree = "<group>"; };
+		1BC9AE1218C70F0000C99622 /* NGTextFieldValidationObserverSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NGTextFieldValidationObserverSpec.mm; sourceTree = "<group>"; };
+		1BC9AE1418C7105600C99622 /* NGTextFieldValidationObserver_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGTextFieldValidationObserver_Private.h; sourceTree = "<group>"; };
 		1BDE994518C13C76004EAD12 /* TextFieldChanges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFieldChanges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDE994818C13C76004EAD12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BDE994A18C13C76004EAD12 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,14 +67,22 @@
 		1BDE996018C13C76004EAD12 /* NGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGViewController.h; sourceTree = "<group>"; };
 		1BDE996118C13C76004EAD12 /* NGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGViewController.m; sourceTree = "<group>"; };
 		1BDE996318C13C76004EAD12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1BDE996918C13C76004EAD12 /* TextFieldChangesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFieldChangesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDE996A18C13C76004EAD12 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1BDE997218C13C76004EAD12 /* TextFieldChangesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextFieldChangesTests-Info.plist"; sourceTree = "<group>"; };
-		1BDE997418C13C76004EAD12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1BDE997618C13C76004EAD12 /* TextFieldChangesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFieldChangesTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1BC9ADF118C6FDAC00C99622 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BC9ADF818C6FDAC00C99622 /* CoreGraphics.framework in Frameworks */,
+				1BC9ADF918C6FDAC00C99622 /* UIKit.framework in Frameworks */,
+				1BC9AE0518C6FDAC00C99622 /* Cedar-iOS.framework in Frameworks */,
+				1BC9ADF718C6FDAC00C99622 /* SenTestingKit.framework in Frameworks */,
+				1BC9ADFA18C6FDAC00C99622 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BDE994218C13C76004EAD12 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,24 +93,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1BDE996618C13C76004EAD12 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BDE996B18C13C76004EAD12 /* XCTest.framework in Frameworks */,
-				1BDE996D18C13C76004EAD12 /* UIKit.framework in Frameworks */,
-				1BDE996C18C13C76004EAD12 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BC9ADFB18C6FDAC00C99622 /* TextFieldChangesCedarTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BC9AE1118C70EE400C99622 /* Specs */,
+				1BC9AE0318C6FDAC00C99622 /* Rakefile */,
+				1BC9AE0418C6FDAC00C99622 /* Cedar-iOS.framework */,
+				1BC9ADFC18C6FDAC00C99622 /* Supporting Files */,
+			);
+			path = TextFieldChangesCedarTests;
+			sourceTree = "<group>";
+		};
+		1BC9ADFC18C6FDAC00C99622 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BC9ADFD18C6FDAC00C99622 /* TextFieldChangesCedarTests-Info.plist */,
+				1BC9ADFE18C6FDAC00C99622 /* InfoPlist.strings */,
+				1BC9AE0618C6FDAC00C99622 /* TextFieldChangesCedarTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BC9AE1118C70EE400C99622 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				1BC9AE0118C6FDAC00C99622 /* NSObjectKeyedSubscriptSpec.mm */,
+				1BC9AE0F18C7036F00C99622 /* NSCacheNGValidationSpec.mm */,
+				1BC9AE1218C70F0000C99622 /* NGTextFieldValidationObserverSpec.mm */,
+			);
+			name = Specs;
+			sourceTree = "<group>";
+		};
+		1BC9AE1518C7107F00C99622 /* NGTextFieldValidationObserver */ = {
+			isa = PBXGroup;
+			children = (
+				1B075BF918C4129A001B30D0 /* NGTextFieldValidationObserver.h */,
+				1B075BFA18C4129A001B30D0 /* NGTextFieldValidationObserver.m */,
+				1BC9AE1418C7105600C99622 /* NGTextFieldValidationObserver_Private.h */,
+			);
+			name = NGTextFieldValidationObserver;
+			sourceTree = "<group>";
+		};
 		1BDE993C18C13C76004EAD12 = {
 			isa = PBXGroup;
 			children = (
 				1BDE994E18C13C76004EAD12 /* TextFieldChanges */,
-				1BDE997018C13C76004EAD12 /* TextFieldChangesTests */,
+				1BC9ADFB18C6FDAC00C99622 /* TextFieldChangesCedarTests */,
 				1BDE994718C13C76004EAD12 /* Frameworks */,
 				1BDE994618C13C76004EAD12 /* Products */,
 			);
@@ -95,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				1BDE994518C13C76004EAD12 /* TextFieldChanges.app */,
-				1BDE996918C13C76004EAD12 /* TextFieldChangesTests.xctest */,
+				1BC9ADF518C6FDAC00C99622 /* TextFieldChangesCedarTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +163,7 @@
 				1BDE994A18C13C76004EAD12 /* CoreGraphics.framework */,
 				1BDE994C18C13C76004EAD12 /* UIKit.framework */,
 				1BDE996A18C13C76004EAD12 /* XCTest.framework */,
+				1BC9ADF618C6FDAC00C99622 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +179,12 @@
 				1BDE996118C13C76004EAD12 /* NGViewController.m */,
 				1BDE996318C13C76004EAD12 /* Images.xcassets */,
 				1BDE994F18C13C76004EAD12 /* Supporting Files */,
+				1BC9AE1518C7107F00C99622 /* NGTextFieldValidationObserver */,
+				1B10096118C6EB2500F9C877 /* NSObject+KeyedSubscript.h */,
+				1B10096218C6EB2500F9C877 /* NSObject+KeyedSubscript.m */,
+				1BC9AE0A18C700D900C99622 /* NSCache+NGValidation.h */,
+				1BC9AE0B18C700D900C99622 /* NSCache+NGValidation.m */,
+				1BC9AE0D18C7014800C99622 /* NGValidationIncludes.h */,
 			);
 			path = TextFieldChanges;
 			sourceTree = "<group>";
@@ -137,32 +200,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1BDE997018C13C76004EAD12 /* TextFieldChangesTests */ = {
-			isa = PBXGroup;
-			children = (
-				1BDE997618C13C76004EAD12 /* TextFieldChangesTests.m */,
-				1BDE997118C13C76004EAD12 /* Supporting Files */,
-			);
-			path = TextFieldChangesTests;
-			sourceTree = "<group>";
-		};
-		1BDE997118C13C76004EAD12 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1BDE997218C13C76004EAD12 /* TextFieldChangesTests-Info.plist */,
-				1BDE997318C13C76004EAD12 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1BC9ADF418C6FDAC00C99622 /* TextFieldChangesCedarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BC9AE0718C6FDAC00C99622 /* Build configuration list for PBXNativeTarget "TextFieldChangesCedarTests" */;
+			buildPhases = (
+				1BC9ADF018C6FDAC00C99622 /* Sources */,
+				1BC9ADF118C6FDAC00C99622 /* Frameworks */,
+				1BC9ADF218C6FDAC00C99622 /* Resources */,
+				1BC9ADF318C6FDAC00C99622 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextFieldChangesCedarTests;
+			productName = TextFieldChangesCedarTests;
+			productReference = 1BC9ADF518C6FDAC00C99622 /* TextFieldChangesCedarTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		1BDE994418C13C76004EAD12 /* TextFieldChanges */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BDE997A18C13C76004EAD12 /* Build configuration list for PBXNativeTarget "TextFieldChanges" */;
 			buildPhases = (
 				1BDE994118C13C76004EAD12 /* Sources */,
+				1BC9ADEC18C6F0FD00C99622 /* Increment Build Number */,
 				1BDE994218C13C76004EAD12 /* Frameworks */,
 				1BDE994318C13C76004EAD12 /* Resources */,
 			);
@@ -175,24 +239,6 @@
 			productReference = 1BDE994518C13C76004EAD12 /* TextFieldChanges.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1BDE996818C13C76004EAD12 /* TextFieldChangesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1BDE997D18C13C76004EAD12 /* Build configuration list for PBXNativeTarget "TextFieldChangesTests" */;
-			buildPhases = (
-				1BDE996518C13C76004EAD12 /* Sources */,
-				1BDE996618C13C76004EAD12 /* Frameworks */,
-				1BDE996718C13C76004EAD12 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1BDE996F18C13C76004EAD12 /* PBXTargetDependency */,
-			);
-			name = TextFieldChangesTests;
-			productName = TextFieldChangesTests;
-			productReference = 1BDE996918C13C76004EAD12 /* TextFieldChangesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,8 +249,8 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "James Womack";
 				TargetAttributes = {
-					1BDE996818C13C76004EAD12 = {
-						TestTargetID = 1BDE994418C13C76004EAD12;
+					1BDE994418C13C76004EAD12 = {
+						DevelopmentTeam = 5VF9S3SG45;
 					};
 				};
 			};
@@ -222,12 +268,20 @@
 			projectRoot = "";
 			targets = (
 				1BDE994418C13C76004EAD12 /* TextFieldChanges */,
-				1BDE996818C13C76004EAD12 /* TextFieldChangesTests */,
+				1BC9ADF418C6FDAC00C99622 /* TextFieldChangesCedarTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1BC9ADF218C6FDAC00C99622 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BC9AE0018C6FDAC00C99622 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BDE994318C13C76004EAD12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,17 +293,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1BDE996718C13C76004EAD12 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BC9ADEC18C6F0FD00C99622 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BDE997518C13C76004EAD12 /* InfoPlist.strings in Resources */,
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# set new $IFS\nSAVEIFS=$IFS\nIFS=$(echo -en \"\\n\\b\")\nFILES=\"TextFieldChanges/*-Info.plist\"\nfor plist in $FILES\ndo\necho \"Updating $plist\"\n\nif [[ -z \"$CFBundleVersionNew\" ]]\nthen\nCFBundleVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$plist\")\nCFBundleVersionNew=$(($CFBundleVersion + 1))\nfi\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersionNew\" \"$plist\"\n\nCFBuildDate=$(date)\n\n/usr/libexec/PlistBuddy -c \"Set :CFBuildDate $CFBuildDate\" \"$plist\"\n\ntouch \"$plist\"\ndone\n# restore $IFS\nIFS=$SAVEIFS";
+		};
+		1BC9ADF318C6FDAC00C99622 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BC9ADF018C6FDAC00C99622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BC9AE1618C7134900C99622 /* NGTextFieldValidationObserver_Private.h in Sources */,
+				1BC9AE1318C70F0000C99622 /* NGTextFieldValidationObserverSpec.mm in Sources */,
+				1BC9AE1018C7036F00C99622 /* NSCacheNGValidationSpec.mm in Sources */,
+				1BC9AE0218C6FDAC00C99622 /* NSObjectKeyedSubscriptSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		1BDE994118C13C76004EAD12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,28 +344,24 @@
 				1BDE996218C13C76004EAD12 /* NGViewController.m in Sources */,
 				1BDE995518C13C76004EAD12 /* main.m in Sources */,
 				1BDE995918C13C76004EAD12 /* NGAppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1BDE996518C13C76004EAD12 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BDE997718C13C76004EAD12 /* TextFieldChangesTests.m in Sources */,
+				1BC9AE0E18C7019700C99622 /* NGValidationIncludes.h in Sources */,
+				1B075BFB18C4129A001B30D0 /* NGTextFieldValidationObserver.m in Sources */,
+				1B10096318C6EB2500F9C877 /* NSObject+KeyedSubscript.m in Sources */,
+				1BC9AE0C18C700D900C99622 /* NSCache+NGValidation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		1BDE996F18C13C76004EAD12 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1BDE994418C13C76004EAD12 /* TextFieldChanges */;
-			targetProxy = 1BDE996E18C13C76004EAD12 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		1BC9ADFE18C6FDAC00C99622 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BC9ADFF18C6FDAC00C99622 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		1BDE995118C13C76004EAD12 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -303,17 +386,63 @@
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		1BDE997318C13C76004EAD12 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BDE997418C13C76004EAD12 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1BC9AE0818C6FDAC00C99622 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextFieldChanges.app/TextFieldChanges";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					/Users/1000305692a/Code/noble/TextFieldChanges/TextFieldChangesCedarTests/Frameworks,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextFieldChangesCedarTests/TextFieldChangesCedarTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TextFieldChangesCedarTests/TextFieldChangesCedarTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1BC9AE0918C6FDAC00C99622 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextFieldChanges.app/TextFieldChanges";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					/Users/1000305692a/Code/noble/TextFieldChanges/TextFieldChangesCedarTests/Frameworks,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextFieldChangesCedarTests/TextFieldChangesCedarTests-Prefix.pch";
+				INFOPLIST_FILE = "TextFieldChangesCedarTests/TextFieldChangesCedarTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		1BDE997818C13C76004EAD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,10 +522,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextFieldChanges/TextFieldChanges-Prefix.pch";
 				INFOPLIST_FILE = "TextFieldChanges/TextFieldChanges-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,59 +539,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextFieldChanges/TextFieldChanges-Prefix.pch";
 				INFOPLIST_FILE = "TextFieldChanges/TextFieldChanges-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		1BDE997E18C13C76004EAD12 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextFieldChanges.app/TextFieldChanges";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TextFieldChanges/TextFieldChanges-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "TextFieldChangesTests/TextFieldChangesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		1BDE997F18C13C76004EAD12 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextFieldChanges.app/TextFieldChanges";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TextFieldChanges/TextFieldChanges-Prefix.pch";
-				INFOPLIST_FILE = "TextFieldChangesTests/TextFieldChangesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1BC9AE0718C6FDAC00C99622 /* Build configuration list for PBXNativeTarget "TextFieldChangesCedarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BC9AE0818C6FDAC00C99622 /* Debug */,
+				1BC9AE0918C6FDAC00C99622 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1BDE994018C13C76004EAD12 /* Build configuration list for PBXProject "TextFieldChanges" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -475,14 +578,7 @@
 				1BDE997C18C13C76004EAD12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		1BDE997D18C13C76004EAD12 /* Build configuration list for PBXNativeTarget "TextFieldChangesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1BDE997E18C13C76004EAD12 /* Debug */,
-				1BDE997F18C13C76004EAD12 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

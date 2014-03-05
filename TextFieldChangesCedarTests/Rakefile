@@ -1,0 +1,129 @@
+require 'pathname'
+require 'tmpdir'
+
+module CedarTargetTextFieldChangesCedarTests
+  UI_SPECS_TARGET_NAME = "TextFieldChangesCedarTests"
+  CONFIGURATION = "Release"
+
+  PROJECT_ROOT = Pathname.new(File.dirname(__FILE__)).parent.to_s
+  BUILD_DIR = File.join(PROJECT_ROOT, "build")
+
+  class << self
+    def in_project_dir
+      original_dir = Dir.pwd
+      Dir.chdir(PROJECT_ROOT)
+
+      yield
+
+      ensure
+      Dir.chdir(original_dir)
+    end
+
+    def deployment_target_sdk_version
+      in_project_dir do
+        `xcodebuild -showBuildSettings -target #{UI_SPECS_TARGET_NAME} | grep IPHONEOS_DEPLOYMENT_TARGET | awk '{print $3 }'`.strip
+      end
+    end
+
+    def deployment_target_sdk_dir
+      @sdk_dir ||= "#{xcode_developer_dir}/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator#{deployment_target_sdk_version}.sdk"
+    end
+
+    # Xcode 4.3 stores its /Developer inside /Applications/Xcode.app, Xcode 4.2 stored it in /Developer
+    def xcode_developer_dir
+      `xcode-select -print-path`.strip
+    end
+
+    def build_dir(effective_platform_name)
+      File.join(BUILD_DIR, CONFIGURATION + effective_platform_name)
+    end
+
+    def is_run_unit_tests_deprecated?
+      system("cat #{xcode_developer_dir}/Tools/RunUnitTests | grep -q 'RunUnitTests is obsolete.'")
+    end
+
+    def system_or_exit(cmd, stdout = nil)
+      puts "Executing #{cmd}"
+      cmd += " >#{stdout}" if stdout
+      system(cmd) or raise "******** Build failed ********"
+    end
+
+    def run_cmd_and_grep_for_failure(cmd)
+      puts "Executing #{cmd}"
+      puts result = %x[#{cmd} 2>&1]
+      if result.index(/Test Case.*failed/)
+        exit(1)
+      else
+        exit(0)
+      end
+    end 
+
+    def with_env_vars(env_vars)
+      old_values = {}
+      env_vars.each do |key,new_value|
+        old_values[key] = ENV[key]
+        ENV[key] = new_value
+      end
+
+      yield
+
+      env_vars.each_key do |key|
+        ENV[key] = old_values[key]
+      end
+    end
+
+    def output_file(target)
+      output_dir = if ENV['IS_CI_BOX']
+        ENV['CC_BUILD_ARTIFACTS']
+      else
+        Dir.mkdir(BUILD_DIR) unless File.exists?(BUILD_DIR)
+        BUILD_DIR
+      end
+
+      output_file = File.join(output_dir, "#{target}.output")
+      puts "Output: #{output_file}"
+      output_file
+    end
+
+    def kill_simulator
+      system %Q[killall -m -KILL "gdb"]
+      system %Q[killall -m -KILL "otest"]
+      system %Q[killall -m -KILL "iPhone Simulator"]
+    end
+  end
+end
+
+desc "Clean build directory"
+task :clean_TextFieldChangesCedarTests do
+  CedarTargetTextFieldChangesCedarTests.system_or_exit "rm -rf #{CedarTargetTextFieldChangesCedarTests::BUILD_DIR}/*", CedarTargetTextFieldChangesCedarTests.output_file("clean")
+end
+
+desc "Build TextFieldChangesCedarTests OCUnit application specs"
+task :build_TextFieldChangesCedarTests => :clean_TextFieldChangesCedarTests do
+  CedarTargetTextFieldChangesCedarTests.kill_simulator
+  CedarTargetTextFieldChangesCedarTests.system_or_exit "pushd #{CedarTargetTextFieldChangesCedarTests::PROJECT_ROOT} && xcodebuild -target TextFieldChanges -configuration #{CedarTargetTextFieldChangesCedarTests::CONFIGURATION} -sdk iphonesimulator#{CedarTargetTextFieldChangesCedarTests.deployment_target_sdk_version} build ARCHS=i386 TEST_AFTER_BUILD=NO GCC_SYMBOLS_PRIVATE_EXTERN=NO SYMROOT='#{CedarTargetTextFieldChangesCedarTests::BUILD_DIR}' && popd", CedarTargetTextFieldChangesCedarTests.output_file("TextFieldChangesCedarTests-AppBuild")
+  CedarTargetTextFieldChangesCedarTests.system_or_exit "pushd #{CedarTargetTextFieldChangesCedarTests::PROJECT_ROOT} && xcodebuild -target #{CedarTargetTextFieldChangesCedarTests::UI_SPECS_TARGET_NAME} -configuration #{CedarTargetTextFieldChangesCedarTests::CONFIGURATION} -sdk iphonesimulator#{CedarTargetTextFieldChangesCedarTests.deployment_target_sdk_version} build ARCHS=i386 GCC_SYMBOLS_PRIVATE_EXTERN=NO TEST_AFTER_BUILD=NO SYMROOT='#{CedarTargetTextFieldChangesCedarTests::BUILD_DIR}' && popd", CedarTargetTextFieldChangesCedarTests.output_file("TextFieldChangesCedarTests-SpecBuild")
+end
+
+desc "Run TextFieldChangesCedarTests OCUnit application specs"
+task :TextFieldChangesCedarTests => :build_TextFieldChangesCedarTests do
+  if CedarTargetTextFieldChangesCedarTests.is_run_unit_tests_deprecated?
+    CedarTargetTextFieldChangesCedarTests.run_cmd_and_grep_for_failure "pushd #{CedarTargetTextFieldChangesCedarTests::PROJECT_ROOT} && xcodebuild test -scheme TextFieldChanges -configuration #{CedarTargetTextFieldChangesCedarTests::CONFIGURATION} -destination 'OS=#{CedarTargetTextFieldChangesCedarTests.deployment_target_sdk_version},name=iPhone Retina (3.5-inch)' ARCHS=i386 SYMROOT='#{CedarTargetTextFieldChangesCedarTests::BUILD_DIR}' && popd"
+  else
+    env_vars = {
+      "DYLD_ROOT_PATH" => CedarTargetTextFieldChangesCedarTests.deployment_target_sdk_dir,
+      "DYLD_INSERT_LIBRARIES" => "#{CedarTargetTextFieldChangesCedarTests.xcode_developer_dir}/Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection",
+      "DYLD_FALLBACK_LIBRARY_PATH" => CedarTargetTextFieldChangesCedarTests.deployment_target_sdk_dir,
+      "XCInjectBundle" => "#{File.join(CedarTargetTextFieldChangesCedarTests.build_dir("-iphonesimulator"), "#{CedarTargetTextFieldChangesCedarTests::UI_SPECS_TARGET_NAME}.octest")}",
+      "XCInjectBundleInto" => "#{File.join(CedarTargetTextFieldChangesCedarTests.build_dir("-iphonesimulator"), "TextFieldChanges.app/TextFieldChanges")}",
+      "IPHONE_SIMULATOR_ROOT" => CedarTargetTextFieldChangesCedarTests.deployment_target_sdk_dir,
+      "CFFIXED_USER_HOME" => Dir.tmpdir,
+      "CEDAR_HEADLESS_SPECS" => "1",
+      "CEDAR_REPORTER_CLASS" => "CDRColorizedReporter",
+    }
+
+    CedarTargetTextFieldChangesCedarTests.with_env_vars(env_vars) do
+      CedarTargetTextFieldChangesCedarTests.run_cmd_and_grep_for_failure "#{File.join(CedarTargetTextFieldChangesCedarTests.build_dir("-iphonesimulator"), "TextFieldChanges.app/TextFieldChanges")} -RegisterForSystemEvents -SenTest All"
+    end
+  end
+end
